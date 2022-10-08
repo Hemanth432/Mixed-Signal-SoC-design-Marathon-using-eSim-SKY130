@@ -188,8 +188,14 @@ endmodule
 2. Steve Hoover, Founder, Redwood EDA
 3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 4. Sumanto Kar, eSim Team, FOSSEE
+5. IIT Bombay website : http://iitb.ac.in
+6. Google Website : https://www.google.co.in
+7. FOSSEE Website : https://fossee.in
+8. Spoken tutorials : https://spoken-tutorial.org
+9. VSD Website : https://www.vlsisystemdesign.com
+10. Chips to startup website : https://www.c2s.gov.in
 
 ## References
-1. Website: "https://www.reddit.com/r/AskElectronics/comments/f7ubt4/astable_multivibrator_schmitt_trigger_johnson/" 
+1. Website: "https://www.allaboutcircuits.com/" 
 
 
