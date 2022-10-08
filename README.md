@@ -98,6 +98,7 @@ The following is the schematic in eSim:
 ![image](https://user-images.githubusercontent.com/93421069/157199306-16170f62-50a6-42df-a930-14f112a9167c.jpg)
 ## Verilog Code
 ![Screenshot from 2022-10-08 14-08-03](https://user-images.githubusercontent.com/93421069/194706516-7c538784-1a54-472a-8dd5-68b946f6f25b.png)
+
 ![Screenshot from 2022-10-08 14-08-31](https://user-images.githubusercontent.com/93421069/194706518-f56bc664-dfb7-49d2-bcfa-dccc20af2cce.png)
 ## Makerchip
 ```
@@ -182,6 +183,7 @@ endmodule
 ```
 ## Makerchip Plots
 ![Screenshot from 2022-10-08 14-11-14](https://user-images.githubusercontent.com/93421069/194706599-56d3929e-ed0b-4289-89b4-99c4c490dbde.png)
+
 ![Screenshot from 2022-10-08 14-13-30](https://user-images.githubusercontent.com/93421069/194706604-25dd3ed2-ab04-46b4-a0f3-45bfd4310dd0.png)
 
 ## Netlists
@@ -265,21 +267,35 @@ plot v(count5) +2 v(count4)+4 v(count3)+6 v(count2)+8 v(count1)+12 v(count0)+14 
 ## NgSpice Plots
 
 ![Screenshot from 2022-10-08 17-15-35](https://user-images.githubusercontent.com/93421069/194706696-cea85424-53ab-48c7-aaf9-b0f861f1a5cf.png)
+
 ![Screenshot from 2022-10-08 17-15-58](https://user-images.githubusercontent.com/93421069/194706697-b899022d-eea1-412f-8e72-719ead39677a.png)
+
 ![Screenshot from 2022-10-08 17-16-47](https://user-images.githubusercontent.com/93421069/194706699-be8b5e04-7032-420d-9686-9046185660fc.png)
+
 ![Screenshot from 2022-10-08 17-16-32](https://user-images.githubusercontent.com/93421069/194706701-d50e61ff-1d0e-41f4-9b90-113ab9ca0c72.png)
+
 ![Screenshot from 2022-10-08 17-16-16](https://user-images.githubusercontent.com/93421069/194706702-da8b6ab4-3b22-493a-ba49-aae3b2a9ce43.png)
+
 ![Screenshot from 2022-10-08 17-17-04](https://user-images.githubusercontent.com/93421069/194706704-392fcbe1-8404-46a3-9f1c-fa702532baea.png)
+
 ![Screenshot from 2022-10-08 17-17-54](https://user-images.githubusercontent.com/93421069/194706705-2c72f33d-54c5-4868-9402-abef43adf648.png)
+
 ![Screenshot from 2022-10-08 17-17-43](https://user-images.githubusercontent.com/93421069/194706707-89a1d518-a1d2-4f70-a897-8fbf065ae67d.png)
+
 ![Screenshot from 2022-10-08 17-17-30](https://user-images.githubusercontent.com/93421069/194706708-f213b65f-5e53-4de0-a3f2-0258bf722f54.png)
+
 ![Screenshot from 2022-10-08 17-17-18](https://user-images.githubusercontent.com/93421069/194706710-7455643c-a3a2-4859-beaf-651ef5d009ee.png)
+
 ![Screenshot from 2022-10-08 17-18-07](https://user-images.githubusercontent.com/93421069/194706711-2a9f4aa0-36a8-43eb-984b-4224dccb86a5.png)
+
 ![Screenshot from 2022-10-08 17-18-19](https://user-images.githubusercontent.com/93421069/194706712-0d7ced07-8c32-4e21-a2b1-4e51a73ba5a7.png)
 
 
 ## GAW Plots
-![image](https://user-images.githubusercontent.com/93421069/157199313-04d774cc-8efb-47e7-a59b-ddc357910b30.jpg)
+![Screenshot from 2022-10-08 17-20-10](https://user-images.githubusercontent.com/93421069/194706759-0d42d54f-ecd7-44f8-abd5-55b1f30eced9.png)
+
+![Screenshot from 2022-10-08 17-22-19](https://user-images.githubusercontent.com/93421069/194706762-17117967-98a0-4ec0-81b6-96b281044365.png)
+
 ## Steps to run generate NgVeri Model
 1. Open eSim
 2. Run NgVeri-Makerchip 
