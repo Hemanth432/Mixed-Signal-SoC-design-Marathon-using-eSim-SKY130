@@ -1,0 +1,42 @@
+* /home/hemanth/eSim-Workspace/ringcolmult/ringcolmult.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat Oct  8 16:47:39 2022
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC2  Net-_SC1-Pad1_ inte_out sky130_fd_pr__cap_mim_m3_1		
+X1  Net-_X1-Pad1_ GND GND Net-_SC1-Pad1_ inte_out GND avsd_opamp		
+SC1  Net-_SC1-Pad1_ vin Net-_SC1-Pad3_ sky130_fd_pr__res_generic_nd		
+SC3  GND inte_out Net-_SC1-Pad3_ sky130_fd_pr__res_generic_nd		
+U1  inte_out mux_in Net-_U1-Pad3_ Net-_U1-Pad4_ adc_bridge_2		
+scmode1  SKY130mode		
+v4  mux_in GND sine		
+U2  Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U2-Pad3_ mux_out m21		
+v1  vin GND sine		
+v3  Net-_X1-Pad1_ GND DC		
+v2  Net-_SC1-Pad3_ GND DC		
+v5  Net-_U3-Pad1_ GND pulse		
+U3  Net-_U3-Pad1_ Net-_U2-Pad3_ adc_bridge_1		
+U7  mux_out Net-_U7-Pad2_ dac_bridge_1		
+X2  Net-_U7-Pad2_ GND ringosc ringoscillator		
+X3  ringosc Net-_X3-Pad2_ smt_out smttrigger21		
+v6  Net-_X3-Pad2_ GND DC		
+U4  Net-_U4-Pad1_ GND Net-_U19-Pad1_ Net-_U19-Pad2_ Net-_U19-Pad3_ Net-_U19-Pad4_ Net-_U19-Pad5_ Net-_U19-Pad6_ ringcounter		
+U5  smt_out Net-_U4-Pad1_ adc_bridge_1		
+U13  count5 plot_v1		
+U14  count4 plot_v1		
+U15  count3 plot_v1		
+U16  count2 plot_v1		
+U17  count1 plot_v1		
+U18  count0 plot_v1		
+U11  smt_out plot_v1		
+U8  ringosc plot_v1		
+U12  mux_out plot_v1		
+U9  inte_out plot_v1		
+U10  mux_in plot_v1		
+U6  vin plot_v1		
+U19  Net-_U19-Pad1_ Net-_U19-Pad2_ Net-_U19-Pad3_ Net-_U19-Pad4_ Net-_U19-Pad5_ Net-_U19-Pad6_ count5 count4 count3 count2 count1 count0 dac_bridge_6		
+
+.end
