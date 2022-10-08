@@ -97,8 +97,8 @@ https://www.veripool.org/verilator/
 The following is the schematic in eSim:
 ![image](https://user-images.githubusercontent.com/93421069/157199306-16170f62-50a6-42df-a930-14f112a9167c.jpg)
 ## Verilog Code
-![image](https://user-images.githubusercontent.com/93421069/157201419-303a4949-bf9a-4f82-a192-06b1726ea696.jpg)
-)
+![Screenshot from 2022-10-08 14-08-03](https://user-images.githubusercontent.com/93421069/194706516-7c538784-1a54-472a-8dd5-68b946f6f25b.png)
+![Screenshot from 2022-10-08 14-08-31](https://user-images.githubusercontent.com/93421069/194706518-f56bc664-dfb7-49d2-bcfa-dccc20af2cce.png)
 ## Makerchip
 ```
 \TLV_version 1d: tl-x.org
