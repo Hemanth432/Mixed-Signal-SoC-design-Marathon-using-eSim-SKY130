@@ -103,11 +103,8 @@ The following is the schematic in eSim:
 ```
 \TLV_version 1d: tl-x.org
 \SV
-/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/  
-
+/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/ 
 //Your Verilog/System Verilog Code Starts Here:
-///////Verilog Code Johnson COunter //////
- 
 module m21( D0, D1, S, Y);
 input wire D0, D1, S;
 output reg Y;
@@ -123,14 +120,19 @@ Y=D0;
 end
 
 endmodule
-//////End////
 
 
 //Top Module Code Starts here:
 	module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
-		logic  [3:0] out;//output
+		logic  D0;//input
+		logic  D1;//input
+		logic  S;//input
+		logic  Y;//output
 //The $random() can be replaced if user wants to assign values
-		johnson_counter johnson_counter(.clk(clk), .reset(reset), .out(out));
+		assign D0 = $random();
+		assign D1 = $random();
+		assign S = $random();
+		m21 m21(.D0(D0), .D1(D1), .S(S), .Y(Y));
 	
 \TLV
 //Add \TLV here if desired                                     
@@ -138,6 +140,44 @@ endmodule
 endmodule
 
 
+```
+```
+\TLV_version 1d: tl-x.org
+\SV
+/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/    /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/
+//Your Verilog/System Verilog Code Starts Here:
+module ringcounter(clk, rst, count);  
+    input clk, rst; 
+    output [5:0] count; 
+    wire clk, rst; 
+    reg [5:0] count = 8'b1;  
+    // Respond to the positive-going pulse edge     
+  always @ ( posedge clk, posedge rst ) 
+        begin   
+        if ( ~rst )   
+            begin     
+            count <= count << 1;    
+            count[0] <= count[5];   
+        end 
+          else 
+            count <= 8'b1;
+    end  
+
+endmodule 
+
+
+//Top Module Code Starts here:
+	module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
+		logic  rst;//input
+		logic  [5:0] count;//output
+//The $random() can be replaced if user wants to assign values
+		assign rst = $random();
+		ringcounter ringcounter(.clk(clk), .rst(rst), .count(count));
+	
+\TLV
+//Add \TLV here if desired                                     
+\SV
+endmodule
 
 ```
 ## Makerchip Plots
