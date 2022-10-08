@@ -95,7 +95,7 @@ https://www.veripool.org/verilator/
 
 ## Circuit Diagram in eSim
 The following is the schematic in eSim:
-[output.pdf](https://github.com/Hemanth432/Mixed-Signal-SoC-design-Marathon-using-eSim-SKY130/files/9739187/output.pdf)
+![sch](https://user-images.githubusercontent.com/93421069/194707091-952f7372-077e-4fc0-990e-8e6ede443304.png)
 
 ![Screenshot from 2022-10-08 17-04-42](https://user-images.githubusercontent.com/93421069/194706892-e6d1780f-30c5-4c9a-9bbb-29cffac96e4b.png)
 
