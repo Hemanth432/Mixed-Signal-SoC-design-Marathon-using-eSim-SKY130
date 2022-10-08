@@ -1,5 +1,5 @@
 # Mixed Signal SoC design Marathon using eSim & SKY130
-# Johnson counter using astable Multivibrator
+# Implementation of Ring counter using Colpitts Oscillator and Multiplexer signal
 - [Abstract](#abstract)
 - [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
