@@ -99,8 +99,6 @@ The following is the schematic in eSim:
 
 ![Screenshot from 2022-10-08 17-04-42](https://user-images.githubusercontent.com/93421069/194706892-e6d1780f-30c5-4c9a-9bbb-29cffac96e4b.png)
 
-![Screenshot from 2022-10-08 17-01-19](https://user-images.githubusercontent.com/93421069/194706894-833d57fc-003f-4552-9302-9a8678c79fde.png)
-
 ![Screenshot from 2022-10-08 17-05-13](https://user-images.githubusercontent.com/93421069/194706896-2b677bb8-e4ed-443c-9004-feda1b65aba7.png)
 
 ![Screenshot from 2022-10-08 17-05-29](https://user-images.githubusercontent.com/93421069/194706897-a118a231-dd46-495c-88ef-e2b43a28c39c.png)
