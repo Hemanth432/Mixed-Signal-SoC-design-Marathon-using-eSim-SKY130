@@ -108,29 +108,21 @@ The following is the schematic in eSim:
 //Your Verilog/System Verilog Code Starts Here:
 ///////Verilog Code Johnson COunter //////
  
-module johnson_counter( out,reset,clk);
-input clk,reset;
-output [3:0] out;
- 
-reg [3:0] q;
- 
-always @(posedge clk)
+module m21( D0, D1, S, Y);
+input wire D0, D1, S;
+output reg Y;
+
+always @(D0 or D1 or S)
 begin
- 
-if(reset)
- q=4'd0;
- else
- 	begin 
- 		q[3]<=q[2];
-  		q[2]<=q[1];
-  		q[1]<=q[0];
-   		q[0]<=(~q[3]);
- 	end
- end
- 
-assign out=q;  
+
+if(S) 
+Y= D1;
+else
+Y=D0;
+
+end
+
 endmodule
- 
 //////End////
 
 
