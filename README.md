@@ -95,7 +95,18 @@ https://www.veripool.org/verilator/
 
 ## Circuit Diagram in eSim
 The following is the schematic in eSim:
-![image](https://user-images.githubusercontent.com/93421069/157199306-16170f62-50a6-42df-a930-14f112a9167c.jpg)
+[output.pdf](https://github.com/Hemanth432/Mixed-Signal-SoC-design-Marathon-using-eSim-SKY130/files/9739187/output.pdf)
+
+![Screenshot from 2022-10-08 17-04-42](https://user-images.githubusercontent.com/93421069/194706892-e6d1780f-30c5-4c9a-9bbb-29cffac96e4b.png)
+
+![Screenshot from 2022-10-08 17-01-19](https://user-images.githubusercontent.com/93421069/194706894-833d57fc-003f-4552-9302-9a8678c79fde.png)
+
+![Screenshot from 2022-10-08 17-05-13](https://user-images.githubusercontent.com/93421069/194706896-2b677bb8-e4ed-443c-9004-feda1b65aba7.png)
+
+![Screenshot from 2022-10-08 17-05-29](https://user-images.githubusercontent.com/93421069/194706897-a118a231-dd46-495c-88ef-e2b43a28c39c.png)
+
+![Screenshot from 2022-10-08 17-05-45](https://user-images.githubusercontent.com/93421069/194706898-bc7d6159-81b3-427a-a494-9ebaee884fcc.png)
+
 ## Verilog Code
 ![Screenshot from 2022-10-08 14-08-03](https://user-images.githubusercontent.com/93421069/194706516-7c538784-1a54-472a-8dd5-68b946f6f25b.png)
 
