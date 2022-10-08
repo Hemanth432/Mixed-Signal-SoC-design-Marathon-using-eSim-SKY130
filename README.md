@@ -175,9 +175,9 @@ endmodule
 2. Clone this project using the following command:</br>
 ```git clone https://github.com/Hemanth432?tab=repositories ```</br>
 3. Change directory:</br>
-```cd https://github.com/Hemanth432/Mixed-Signal-simulation-Hackathon ```</br>
+```cd https://github.com/Hemanth432/Mixed Signal SoC design Marathon using eSim & SKY130 ```</br>
 4. Run ngspice:</br>
-```ngspice johnson_amv_hemanth.cir.out```</br>
+```ngspice ringcolmult.cir.out```</br>
 5. To run the project in eSim:
 
   - Run eSim</br>
