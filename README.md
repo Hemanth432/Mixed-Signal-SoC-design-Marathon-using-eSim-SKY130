@@ -62,7 +62,6 @@ to produce the sine wave. The sine wave is given as input
 to schmitt trigger to produce pulse output. The pulse
 output is used to produce the ring counter output.
 
-</br>
 ## Software Used
 ### eSim
 It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD.
@@ -85,13 +84,21 @@ https://www.veripool.org/verilator/
 The following is the schematic in eSim:
 
 ![sch](https://user-images.githubusercontent.com/93421069/194707091-952f7372-077e-4fc0-990e-8e6ede443304.png)
+
 Integrator circuit:
+
 ![Screenshot from 2022-10-08 17-04-42](https://user-images.githubusercontent.com/93421069/194706892-e6d1780f-30c5-4c9a-9bbb-29cffac96e4b.png)
+
 Multiplexer 2:1 
+
 ![Screenshot from 2022-10-08 17-05-13](https://user-images.githubusercontent.com/93421069/194706896-2b677bb8-e4ed-443c-9004-feda1b65aba7.png)
+
 Oscillator and smttrigger:
+
 ![Screenshot from 2022-10-08 17-05-29](https://user-images.githubusercontent.com/93421069/194706897-a118a231-dd46-495c-88ef-e2b43a28c39c.png)
+
 Ring counter:
+
 ![Screenshot from 2022-10-08 17-05-45](https://user-images.githubusercontent.com/93421069/194706898-bc7d6159-81b3-427a-a494-9ebaee884fcc.png)
 
 ## Verilog Code
