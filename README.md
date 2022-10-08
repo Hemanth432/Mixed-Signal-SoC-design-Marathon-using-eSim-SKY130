@@ -44,9 +44,9 @@ register, with the output of the last flip-flop fed to the input of
 the first, making a "circular" or "ring" structure.
 
 ## Reference Circuit Diagram
-![WhatsApp Image 2022-09-28 at 8 52 08 PM](https://user-images.githubusercontent.com/93421069/194697610-cb694d02-90b8-453e-bf7e-5a3a4f1d69c4.jpeg)
+![WhatsApp Image 2022-09-28 at 8 34 44 PM](https://user-images.githubusercontent.com/93421069/194697753-1882594f-06e7-4c37-8c7a-d4740d3c7a5d.jpeg)
 ## Reference Waveform
-![image](https://user-images.githubusercontent.com/93421069/157208248-74939048-05c9-41a7-844a-62a3ba550d86.png)
+![WhatsApp Image 2022-09-28 at 8 52 08 PM](https://user-images.githubusercontent.com/93421069/194697610-cb694d02-90b8-453e-bf7e-5a3a4f1d69c4.jpeg)
 ## Circuit Details
 The circuit contains the integration of op amp based
 integrator, 2×1 multiplexer, Colpitts oscillator, schmitt
