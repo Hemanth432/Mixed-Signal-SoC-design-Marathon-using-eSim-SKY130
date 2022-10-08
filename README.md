@@ -183,7 +183,83 @@ endmodule
 ## Makerchip Plots
 ![image](https://user-images.githubusercontent.com/93421069/157203919-81198120-0aa3-465b-b91a-b82deb184e08.jpg)
 ## Netlists
-![image](https://user-images.githubusercontent.com/93421069/157199341-a6362b3e-6954-409c-83a6-121f35dd0b9f.jpg)
+```
+* /home/hemanth/esim-workspace/ringcolmult/ringcolmult.cir
+
+.include smttrigger21.sub
+.include avsd_opamp.sub
+.include ringoscillator.sub
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+xsc2 net-_sc1-pad1_ inte_out sky130_fd_pr__cap_mim_m3_1 W=99 L =999 MF=1
+x1 net-_x1-pad1_ gnd gnd net-_sc1-pad1_ inte_out gnd avsd_opamp
+xsc1 net-_sc1-pad1_ vin net-_sc1-pad3_ sky130_fd_pr__res_generic_nd W=1 L=9900 MF=1
+xsc3 gnd inte_out net-_sc1-pad3_ sky130_fd_pr__res_generic_nd W=1 L=9000 MF=1
+* u1  inte_out mux_in net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2
+* s c m o d e
+v4  mux_in gnd sine(0 3.3 70 0 0)
+* u2  net-_u1-pad3_ net-_u1-pad4_ net-_u2-pad3_ mux_out m21
+v1  vin gnd sine(0 3.3 50 0 0)
+v3 net-_x1-pad1_ gnd  dc 5
+v2 net-_sc1-pad3_ gnd  dc 5
+v5  net-_u3-pad1_ gnd pulse(0 5 0 5n 10n 10m 20m)
+* u3  net-_u3-pad1_ net-_u2-pad3_ adc_bridge_1
+* u7  mux_out net-_u7-pad2_ dac_bridge_1
+x2 net-_u7-pad2_ gnd ringosc ringoscillator
+x3 ringosc net-_x3-pad2_ smt_out smttrigger21
+v6 net-_x3-pad2_ gnd  dc 5
+* u4  net-_u4-pad1_ gnd net-_u19-pad1_ net-_u19-pad2_ net-_u19-pad3_ net-_u19-pad4_ net-_u19-pad5_ net-_u19-pad6_ ringcounter
+* u5  smt_out net-_u4-pad1_ adc_bridge_1
+* u13  count5 plot_v1
+* u14  count4 plot_v1
+* u15  count3 plot_v1
+* u16  count2 plot_v1
+* u17  count1 plot_v1
+* u18  count0 plot_v1
+* u11  smt_out plot_v1
+* u8  ringosc plot_v1
+* u12  mux_out plot_v1
+* u9  inte_out plot_v1
+* u10  mux_in plot_v1
+* u6  vin plot_v1
+* u19  net-_u19-pad1_ net-_u19-pad2_ net-_u19-pad3_ net-_u19-pad4_ net-_u19-pad5_ net-_u19-pad6_ count5 count4 count3 count2 count1 count0 dac_bridge_6
+a1 [inte_out mux_in ] [net-_u1-pad3_ net-_u1-pad4_ ] u1
+a2 [net-_u1-pad3_ ] [net-_u1-pad4_ ] [net-_u2-pad3_ ] [mux_out ] u2
+a3 [net-_u3-pad1_ ] [net-_u2-pad3_ ] u3
+a4 [mux_out ] [net-_u7-pad2_ ] u7
+a5 [net-_u4-pad1_ ] [gnd ] [net-_u19-pad1_ net-_u19-pad2_ net-_u19-pad3_ net-_u19-pad4_ net-_u19-pad5_ net-_u19-pad6_ ] u4
+a6 [smt_out ] [net-_u4-pad1_ ] u5
+a7 [net-_u19-pad1_ net-_u19-pad2_ net-_u19-pad3_ net-_u19-pad4_ net-_u19-pad5_ net-_u19-pad6_ ] [count5 count4 count3 count2 count1 count0 ] u19
+* Schematic Name:                             adc_bridge_2, NgSpice Name: adc_bridge
+.model u1 adc_bridge(in_low=300m in_high=450m rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             m21, NgSpice Name: m21
+.model u2 m21(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_1, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=300m in_high=450m rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u7 dac_bridge(out_low=0 out_high=5 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             ringcounter, NgSpice Name: ringcounter
+.model u4 ringcounter(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=2 ) 
+* Schematic Name:                             adc_bridge_1, NgSpice Name: adc_bridge
+.model u5 adc_bridge(in_low=300m in_high=450m rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_6, NgSpice Name: dac_bridge
+.model u19 dac_bridge(out_low=0 out_high=5 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 0.01e-00 0.1e-00 0e-03
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(count5) +2 v(count4)+4 v(count3)+6 v(count2)+8 v(count1)+12 v(count0)+14 v(smt_out)+16 v(ringosc)+18 v(mux_out)+20 v(inte_out)+22 v(mux_in)+24 v(vin)
+.endc
+.end
+```
 ## NgSpice Plots
 ![image](https://user-images.githubusercontent.com/93421069/157198999-fd38420c-e9da-4a0c-8682-abe88fd31df5.jpg)
 ![image]((https://user-images.githubusercontent.com/93421069/157199201-5630b945-6a28-4d06-8750-4d1a734e535f.jpg)
