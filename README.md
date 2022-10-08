@@ -26,36 +26,42 @@
 
 
 ## Abstract
-Ring counters are used to
-count the data in a continuous loop.
-Astable multivibrators are also known as
-Free-running Multivibrator as they do not
-require any additional inputs or external
-assistance to oscillate. From the Astable
-Multivibrator, the squarewave output is
-given to the Johnson counter. In this way,
-we implement the Johnson counter with
-the help of the Astable Multivibrator.
+An integrator is an op amp circuit, whose output is
+proportional to the integral of input signal. An integrator is
+basically an inverting amplifier where we replace feedback
+resistor with a capacitor of suitable value. A multiplexer
+(MUX) is a device allowing one or more low-speed analog or
+digital input signals to be selected, combined and transmitted
+at a higher speed on a single shared medium or within a single
+shared device.A Colpitts oscillator looks just like the Hartley
+oscillator but the inductors and capacitors are replaced with
+each other in the tank circuit.Schmitt trigger devices are
+typically used in signal conditioning applications to remove
+noise from signals used in digital circuits, particularly
+mechanical contact bounce in switches.A ring counter is a
+type of counter composed of flip-flops connected into a shift
+register, with the output of the last flip-flop fed to the input of
+the first, making a "circular" or "ring" structure.
 
 ## Reference Circuit Diagram
 ![image](https://user-images.githubusercontent.com/93421069/157207336-95d44d3f-1c05-490b-ae0d-7b1a8789ab79.jpg)
 ## Reference Waveform
 ![image](https://user-images.githubusercontent.com/93421069/157208248-74939048-05c9-41a7-844a-62a3ba550d86.png)
 ## Circuit Details
-As shown in circuit diagram Figure 1, we
-have an astable multivibrator. It also
-includes a Johnson counter connected.
-From the astable multivibrator, we get
-the squarewave output which can be used
-as the clock input.
-The squarewave used as clock input is
-given to the johnson counter. We are
-getting the output from the overall circuit
-as shown in Figure 2. The advantage of
-the circuit is that we can observe the
-outputs of the astable multivibrator and
-johnson counter. It can be used as a
-multipurpose circuit.
+The circuit contains the integration of op amp based
+integrator, 2×1 multiplexer, Colpitts oscillator, schmitt
+trigger and ring counter. The connections are shown in
+the Figure1. The expected waveforms are shown in
+Figure 2. The implementation focuses on the input
+selected through the multiplexer. It is basically focusing
+on mixed signal integration.
+When the mux select line is 0, it selects vdc output. When
+is 1, it will select the integrated output from the
+integrator. Next stage, the output is given to the oscillator
+to produce the sine wave. The sine wave is given as input
+to schmitt trigger to produce pulse output. The pulse
+output is used to produce the ring counter output.
+
 </br>
 ## Truth Table
 
