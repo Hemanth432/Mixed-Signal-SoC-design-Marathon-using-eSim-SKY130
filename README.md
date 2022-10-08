@@ -181,7 +181,9 @@ endmodule
 
 ```
 ## Makerchip Plots
-![image](https://user-images.githubusercontent.com/93421069/157203919-81198120-0aa3-465b-b91a-b82deb184e08.jpg)
+![Screenshot from 2022-10-08 14-11-14](https://user-images.githubusercontent.com/93421069/194706599-56d3929e-ed0b-4289-89b4-99c4c490dbde.png)
+![Screenshot from 2022-10-08 14-13-30](https://user-images.githubusercontent.com/93421069/194706604-25dd3ed2-ab04-46b4-a0f3-45bfd4310dd0.png)
+
 ## Netlists
 ```
 * /home/hemanth/esim-workspace/ringcolmult/ringcolmult.cir
